@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Router from 'next/router';
 import Link from 'next/link';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Mapping = () => {
 
