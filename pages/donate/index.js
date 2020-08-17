@@ -1,3 +1,5 @@
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import Nav from '../../components/Nav';

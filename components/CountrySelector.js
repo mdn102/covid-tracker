@@ -1,6 +1,17 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import styled from 'styled-components';
 import useStats from '../utils/useStats';
 import Stats from './Stats';
+
+const Selector = styled.div`
+    color: blue;
+    foont-weight: bold;
+    text-align: center;
+    margin: 20px;
+    font-size: 30px;
+`;
+
 
 export default function CountrySelector() {
     const { stats: countries, loading, error } = useStats(
@@ -12,8 +23,8 @@ export default function CountrySelector() {
     if (error) return <p>Error...</p>;
 
     return (
-        <div>
-            <h2>Currently Showing {selectedCountry}</h2>
+        <Selector>
+            <h1>Currently Showing {selectedCountry}</h1>
             <select
                 onChange={e => {
                     setSelectedCountry(e.target.value);
@@ -21,17 +32,17 @@ export default function CountrySelector() {
             >
                 {Object.entries(countries.countries).map(([country, code]) => (
                     <option
-                        selected={selectedCountry === countries.iso3[code]}
-                        key={code}
-                        value={countries.iso3[code]}
+                        selected={selectedCountry === code.name}
+                        key={country}
+                        value={code.iso3}
                     >
-                        {country}
+                        {code.name}
                     </option>
                 ))}
             </select>
             <Stats
                 url={`https://covid19.mathdro.id/api/countries/${selectedCountry}`}
             ></Stats>
-        </div>
+        </Selector>
     );
 }

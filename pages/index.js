@@ -1,4 +1,6 @@
+import React from 'react';
 import { createGlobalStyle } from 'styled-components';
+import styles from '../styles/Home.module.css';
 import Nav from '../components/Nav';
 import Mapping from '../components/Mapping';
 import Jumbotron from 'react-bootstrap/Jumbotron';
@@ -18,16 +20,15 @@ export default function Home() {
   return (
     <div>
       <Nav />
+      <Mapping />
       <div>
         <GlobalStyle />
         <Stats url="https://covid19.mathdro.id/api"></Stats>
         <CountrySelector></CountrySelector>
       </div>
-      <Mapping />
       <style jsx>{`
   
       `}</style>
     </div>
-
   );
 }

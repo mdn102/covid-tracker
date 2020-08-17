@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 import useStats from '../utils/useStats';
 
@@ -5,9 +6,10 @@ const StatGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
+  margin: 20px;
 `;
 const StatBlock = styled.div`
-  background: #f2f2f2;
+  background: #95ac98;
   font-size: 2rem;
   padding: 2rem;
   border-radius: 2rem;
@@ -15,6 +17,7 @@ const StatBlock = styled.div`
   align-items: center;
   justify-items: center;
   text-align: center;
+  margin: 30px;
 `;
 
 export default function Stats({ url }) {

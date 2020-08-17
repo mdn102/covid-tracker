@@ -1,6 +1,6 @@
 import React from 'react';
-import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import Link from 'next/link';
 
 const nav = () => {

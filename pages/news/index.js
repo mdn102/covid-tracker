@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Nav from '../../components/Nav'
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import Jumbotron from 'react-bootstrap/Jumbotron'

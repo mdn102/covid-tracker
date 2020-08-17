@@ -1,5 +1,7 @@
-import Button from 'react-bootstrap/Button';
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
 import Nav from '../../components/Nav';
 import { useState } from 'react';
 // import 'bulma/css/bulma.min.css';
