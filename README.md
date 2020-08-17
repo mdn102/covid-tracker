@@ -1,30 +1,58 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# App name: Covid Tracking 
+# Team members: Minh Nguyen
 
-## Getting Started
 
-First, run the development server:
+[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
 
-```bash
-npm run dev
-# or
-yarn dev
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+
+
+## Features(MVP):
+
+  - Build a site to show the tracking of covid:
+    - Infected person will be represent red
+    - People that person met will be yellow
+    - People that person hasn't met will be green 
+
+### User can also(Strech goal):
+  - can filter:
+    - by age
+    - by county
+    - by gender
+  
+
+
+> In this porject, only one piece of app: Data can be generated, 
+> that mean just reperesent the idea of using d3 lib:
+> All data can be hard core in json file.
+> As possible, data can be load and applied to d3 chart. 
+
+
+
+### Technology: D3.js
+
+D3.js is a JavaScript library for manipulating documents based on data. D3 helps you bring data to life using HTML, SVG, and CSS. D3’s emphasis on web standards gives you the full capabilities of modern browsers without tying yourself to a proprietary framework, combining powerful visualization components and a data-driven approach to DOM manipulation.
+
+D3 allows you to bind arbitrary data to a Document Object Model (DOM), and then apply data-driven transformations to the document. For example, you can use D3 to generate an HTML table from an array of numbers. Or, use the same data to create an interactive SVG bar chart with smooth transitions and interaction.
+
+
+### Installation
+
+Download the latest [D3.js](https://d3js.org/) version (5.16.0) or
+
+To link directly to the latest release, copy this snippet:
+
+```sh
+<script src="https://d3js.org/d3.v5.min.js"></script>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-## Learn More
+### Todos
 
-To learn more about Next.js, take a look at the following resources:
+ - [Wireframes](https://wireframe.cc/project4)
+ - [Trello board](https://trello.com/b/cs2IZ2hk/covid-tracking)
+ 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
