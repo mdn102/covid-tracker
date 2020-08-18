@@ -1,12 +1,12 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import Nav from '../../components/Nav'
-import { Container, Row, Col, Button } from 'react-bootstrap';
+// import { Container, Row, Col, Button } from 'react-bootstrap';
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import Router from 'next/router';
 import Link from 'next/link';
 
-const newsPage = () => {
+const news = () => {
   return (
     <div>
       <Nav />
@@ -20,8 +20,8 @@ const newsPage = () => {
         </div>
         <div className="card-body text-center mb-3">
           <h2 className="card-title h2 my-2"><strong>Socia Media</strong></h2>
-          <p class="card-text py-2">Follow us on social media to update the news.</p>
-          {/* <a href="#" className="btn purple-gradient btn-rounded mb-4">Follow</a> */}
+          <p className="card-text py-2">Follow us on social media to update the news.</p>
+          <a href="#" className="btn purple-gradient btn-rounded mb-4">Follow</a>
           <a className="fa-lg p-2 m-2 li-ic"><i class="fab fa-linkedin-in blue-text"></i></a>       
           <a className="fa-lg p-2 m-2 tw-ic"><i class="fab fa-twitter blue-text"></i></a>        
           <a className="fa-lg p-2 m-2 fb-ic"><i class="fab fa-facebook-f blue-text"></i></a>
@@ -51,4 +51,4 @@ const newsPage = () => {
   )
 }
 
-export default newsPage
+export default news;

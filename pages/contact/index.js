@@ -1,8 +1,9 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import Nav from '../../components/Nav';
+import Jumbotron from 'react-bootstrap/Jumbotron';
 import { useState } from 'react';
 // import 'bulma/css/bulma.min.css';
 import Link from 'next/link';
@@ -57,9 +58,31 @@ const contact = () => {
       });
     }
   };
+
+
   return (
     <div>
       <Nav />
+      <div className="jumbotron p-0">
+        <div className="view overlay rounded-top">
+          <img src="image/getty-crowd.jpg" className="img-fluid" alt="getty crowd image" />
+          <a href="#">
+            <div className="mask rgba-white-slight"></div>
+          </a>
+        </div>
+        <style jsx>{`
+            .jumpotron {
+                margin: 0px auto;
+                text-align: center;
+            }
+            .img-fluid {
+                width: 100%;
+                height: 30vh;
+                text-align: center;
+                margin: 0px auto;
+            }
+        `}</style>
+      </div>
       <div className='section'>
         <div className='container'>
           <div className='columns'>
