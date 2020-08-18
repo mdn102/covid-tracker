@@ -1,5 +1,4 @@
 import React from 'react';
-import { createGlobalStyle } from 'styled-components';
 import styles from '../styles/Home.module.css';
 import Nav from '../components/Nav';
 import Mapping from '../components/Mapping';
