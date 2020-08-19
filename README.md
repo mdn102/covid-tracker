@@ -29,10 +29,10 @@
   
 
 > In this porject: 
->> Data be generated from John Hopskin & Newyork Time for tracking case.  
->> In the daily case happen in US, there is only one feature was excuse, 
->> All data be hard core in json file.
->> As possible, data can be load and applied to d3 chart. 
+> Data be generated from John Hopskin & Newyork Time for tracking case.  
+> In the daily case happen in US, there is only one feature was excuse, 
+> All data be hard core in json file.
+> As possible, data can be load and applied to d3 chart. 
 
 
 
