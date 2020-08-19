@@ -5,15 +5,16 @@ import { useD3 } from "d3blackbox"
 import us from ".././counties-albers-10m.json";
 
 const topojson = require("topojson");
-
-const parseDate = d3.utcParse("%Y-%m-%d");
 const radius = d3.scaleSqrt([0, 200000], [0, 60]);
-const path = d3.geoPath();
-const format = d3.format(",.0f");
+const parseDate = d3.utcParse("%Y-%m-%d");
 const features = new Map(topojson.feature(us, us.objects.counties).features.map(d => [d.id, d]));
-const projection = d3.geoAlbersUsa().scale(1300).translate([487.5, 305])
+const path = d3.geoPath();
+const projection = d3.geoAlbersUsa().scale(1300).translate([487.5, 305]);
+const format = d3.format(",.0f");
+// const metrics = require('next-metrics');
 
 function drawMap(svg, data) {
+
   svg = svg.attr("viewBox", [0, 0, 975, 610]);
 
   svg.append("path")
@@ -69,6 +70,7 @@ ${format(d.value)}`);
 
 
 export default function Mapping() {
+
   const [data, setData] = useState(null);
 
   function position({ fips, state, county }) {
@@ -83,14 +85,18 @@ export default function Mapping() {
   useEffect(() => {
     async function loadData() {
       const rawdata = await d3.csv("us-counties.csv");
-
+      
       const data = rawdata.map(d => ({
         id: d.fips,
         date: parseDate(d.date),
         position: position(d),
         title: d.county === "Unknown" ? d.state : `${d.county}, ${d.state}`,
+        // LINE BELLOW HAVE A BUG: METRIC IS NOT DEFINE
         value: +d[metric]
       }));
+
+      const date = data[0].date;
+
       setData(data);
     }
     loadData();
@@ -104,13 +110,12 @@ export default function Mapping() {
 
   return (
     <div className="map">
-      <h1>Hello, World</h1>
-      <h2>Update the COVID19 cases happens today!</h2>
+      <h1><strong>The Covid-19 Cases in US Today: </strong></h1>
       <svg width="1280" height="1024" ref={svgRef} />
       <style jsx>{`
         .map {
           text-align: center;
-          color: red;
+          color: orange;
         }
       `}</style>
     </div>
