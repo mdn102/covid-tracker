@@ -1,54 +1,50 @@
-# App name: Covid Tracking 
-# Team members: Minh Nguyen
+# Covid Tracker  
 
 
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
+## Installation:
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+[Try here](https://covid-tracker-iota-nine.vercel.app/)
 
 
 ## Features(MVP):
 
-  - Build a site to show the tracking of covid:
-    - Infected person will be represent red
-    - People that person met will be yellow
-    - People that person hasn't met will be green 
+  - This app able to show the tracking of covid:
+    - The case happen in US everyday by using bubble map, it will be represent orange
+    - User can tracking the status of Covid-19 worldwide: 
+        - Confirmed case will represent by orange.
+        - Deaths case will represent by red.
+        - Recovered case will represent bt green.  
+    - User can check in news or follow social media to updated the newest information.  
+    - User can volunteer to participate or donate for Seattle city, King County, WA. 
+    - User can send a message if they need help. 
+    
 
 ### User can also(Strech goal):
   - can filter:
-    - by age
-    - by county
-    - by gender
+    - by Deaths
+    - by Confirmed cases
+    - by Confirmed Deaths
+    - by Probable cases
+    - by Probable deaths
   
 
-
-> In this porject, only one piece of app: Data can be generated, 
-> that mean just reperesent the idea of using d3 lib:
-> All data can be hard core in json file.
-> As possible, data can be load and applied to d3 chart. 
-
-
-
-### Technology: D3.js
-
-D3.js is a JavaScript library for manipulating documents based on data. D3 helps you bring data to life using HTML, SVG, and CSS. D3’s emphasis on web standards gives you the full capabilities of modern browsers without tying yourself to a proprietary framework, combining powerful visualization components and a data-driven approach to DOM manipulation.
-
-D3 allows you to bind arbitrary data to a Document Object Model (DOM), and then apply data-driven transformations to the document. For example, you can use D3 to generate an HTML table from an array of numbers. Or, use the same data to create an interactive SVG bar chart with smooth transitions and interaction.
-
-
-### Installation
-
-Download the latest [D3.js](https://d3js.org/) version (5.16.0) or
-
-To link directly to the latest release, copy this snippet:
-
-```sh
-<script src="https://d3js.org/d3.v5.min.js"></script>
-```
+> In this porject: 
+>> Data be generated from John Hopskin & Newyork Time for tracking case.  
+>> In the daily case happen in US, there is only one feature was excuse, 
+>> All data be hard core in json file.
+>> As possible, data can be load and applied to d3 chart. 
 
 
 
-### Todos
+### Technology: 
+   - D3js
+   - Nextjs
+   - React
+   - Bootstrap
+
+
+
+### Todos list
 
  - [Wireframes](https://wireframe.cc/project4)
  - [Trello board](https://trello.com/b/cs2IZ2hk/covid-tracking)
