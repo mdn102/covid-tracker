@@ -1,7 +1,7 @@
 # Covid Tracker  
 
 
-## Installation: [Try here](https://covid-tracker-iota-nine.vercel.app/)
+## Installation: [Click here](https://covid-tracker-iota-nine.vercel.app/)
 
 
 
