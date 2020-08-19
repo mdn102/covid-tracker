@@ -89,7 +89,7 @@ export default function Mapping() {
         date: parseDate(d.date),
         position: position(d),
         title: d.county === "Unknown" ? d.state : `${d.county}, ${d.state}`,
-        value: +d[metric]
+        value: d.cases
       }));
       setData(data);
     }
