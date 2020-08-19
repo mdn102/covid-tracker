@@ -5,13 +5,14 @@ import { useD3 } from "d3blackbox"
 import us from ".././counties-albers-10m.json";
 
 const topojson = require("topojson");
+// const metrics = require('next-metrics');
+
 const radius = d3.scaleSqrt([0, 200000], [0, 60]);
 const parseDate = d3.utcParse("%Y-%m-%d");
 const features = new Map(topojson.feature(us, us.objects.counties).features.map(d => [d.id, d]));
 const path = d3.geoPath();
 const projection = d3.geoAlbersUsa().scale(1300).translate([487.5, 305]);
 const format = d3.format(",.0f");
-// const metrics = require('next-metrics');
 
 function drawMap(svg, data) {
 
@@ -91,8 +92,7 @@ export default function Mapping() {
         date: parseDate(d.date),
         position: position(d),
         title: d.county === "Unknown" ? d.state : `${d.county}, ${d.state}`,
-        // LINE BELLOW HAVE A BUG: METRIC IS NOT DEFINE
-        value: +d[metric]
+        value: d.cases
       }));
 
       const date = data[0].date;
@@ -110,14 +110,20 @@ export default function Mapping() {
 
   return (
     <div className="map">
-      <h1><strong>The Covid-19 Cases in US Today: </strong></h1>
+      <h1><strong>The Covid-19 Cases in US today: </strong></h1>
       <svg width="1280" height="1024" ref={svgRef} />
       <style jsx>{`
         .map {
+          // background-color: black;
           text-align: center;
           color: orange;
+        }
+        h1 {
+          font-size: 100px;
         }
       `}</style>
     </div>
   );
 }
+
+

@@ -5,8 +5,8 @@ import useStats from '../utils/useStats';
 import Stats from './Stats';
 
 const Selector = styled.div`
-    color: blue;
-    foont-weight: bold;
+    color: violet;
+    font-weight: bold;
     text-align: center;
     margin: 20px;
     font-size: 30px;
