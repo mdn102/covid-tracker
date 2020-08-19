@@ -20,7 +20,7 @@ export default function tracking() {
     return (
         <div>
             <Nav />
-            <h1 className="title"><span>Rolling updates on coronavirus disease (COVID-19)</span></h1>
+            <h1 className="title"><span> Updates COVID-19 Worldwide </span></h1>
             <GlobalStyle />
             <Stats url="https://covid19.mathdro.id/api" />
             <CountrySelector />
